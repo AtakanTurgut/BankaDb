@@ -14,4 +14,4 @@ Kabul Kriterleri:
 - Bir kişinin veya kurumun bankamızın müşterisi olabilmesi için çeşitli kanallar mevcuttur. (İnternet, Şube vb.) Müşterinin hangi kanaldan bankamıza ilk kez katıldığı bilgisini de tutmak istiyoruz.
 
 #### Banka Müşteri Yönetim Diyagramı - Kısmi Veritabanı Tasarımı
-![](MusteriYonetimi_Diagram.PNG)
+![](MusteriYonetimi_Diagram.PNG) 
