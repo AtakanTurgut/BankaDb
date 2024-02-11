@@ -2,7 +2,7 @@
 using Bank.DataAccess.Concretes;
 using Bank.Entities;
 
-BaseCustomerManager customerManager = new(new BaseCustomerDal());   // (new EfBaseCustomerDal)
+BaseCustomerManager customerManager = new(new BaseCustomerDal());   // (new EfBaseCustomerDal())
 List<BaseCustomer> customers = customerManager.GetAll();
 
 for (int i = 0; i < customers.Count; i++)
@@ -10,8 +10,7 @@ for (int i = 0; i < customers.Count; i++)
     Console.WriteLine(customers[i].Id + " / " + customers[i].CustomerNumber);
 }
 
-/*
-using Bank.Entities;
+Console.WriteLine("----------");
 
 IndividualCustomer customer1 = new IndividualCustomer();
 customer1.Id = 1;
@@ -39,13 +38,12 @@ customer4.Name = "XYZ";
 customer4.CustomerNumber = "874632951";
 customer4.TaxNumber = "123";
 
-BaseCustomer[] customers = { customer1, customer2, customer3, customer4 };
+BaseCustomer[] cstmrs = { customer1, customer2, customer3, customer4 };
 
 // Polymorphism
-foreach (BaseCustomer customer in customers)
+foreach (BaseCustomer customer in cstmrs)
 {
     Console.WriteLine(customer.Id);
     Console.WriteLine(customer.CustomerNumber);
 	Console.WriteLine(new string('-', 10));
 }
-*/
