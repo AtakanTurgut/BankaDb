@@ -1,4 +1,17 @@
-﻿using Bank.Entities;
+﻿using Bank.Business;
+using Bank.DataAccess.Concretes;
+using Bank.Entities;
+
+BaseCustomerManager customerManager = new(new BaseCustomerDal());   // (new EfBaseCustomerDal)
+List<BaseCustomer> customers = customerManager.GetAll();
+
+for (int i = 0; i < customers.Count; i++)
+{
+    Console.WriteLine(customers[i].Id + " / " + customers[i].CustomerNumber);
+}
+
+/*
+using Bank.Entities;
 
 IndividualCustomer customer1 = new IndividualCustomer();
 customer1.Id = 1;
@@ -35,3 +48,4 @@ foreach (BaseCustomer customer in customers)
     Console.WriteLine(customer.CustomerNumber);
 	Console.WriteLine(new string('-', 10));
 }
+*/
